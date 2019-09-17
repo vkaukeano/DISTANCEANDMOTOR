@@ -35,7 +35,7 @@ try:
 	# start overhead for getting distance each time #
 		GPIO.output(TRIG, False)
 
-		time.sleep(.5)
+		time.sleep(.00001)
 
 		GPIO.output(TRIG, True)
 		time.sleep(0.00001)
