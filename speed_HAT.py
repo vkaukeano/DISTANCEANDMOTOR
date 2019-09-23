@@ -52,10 +52,14 @@ try:
 # start overhead for motor speed each time each time #
 			duty = distance / .5 			
 			print("DUTY", duty)
-			if(distance > 5 && distance < 30):
+			if distance == 0 || " ":
+				r.ChangeDutyCycle(0)
+				l.ChangeDutyCycle(0)
+				
+			elif distance > 5 && distance < 30:
 				r.ChangeDutyCycle(duty) # Change duty cycle for right wheel
 				l.ChangeDutyCycle(duty) # Change duty cycle for left wheel with ratio
-			else:
+			elif
 				r.ChangeDutyCycle(0)
 				l.ChangeDutyCycle(0)
 				
