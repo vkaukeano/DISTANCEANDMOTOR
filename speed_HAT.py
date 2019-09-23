@@ -52,7 +52,7 @@ try:
 # start overhead for motor speed each time each time #
 			duty = distance / .5 			
 			print("DUTY", duty)
-			if distance == 0 || " ":
+			if distance == 0 or " ":
 				r.ChangeDutyCycle(0)
 				l.ChangeDutyCycle(0)
 				
