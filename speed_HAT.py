@@ -29,10 +29,12 @@ try:
 	l = GPIO.PWM(LEFT,50) # Arguments are pin and frequency
 	l.start(0) # Argument is initial duty cycle, it should be 0
 	
+	GPIO.output(TRIG, False)		
+	time.sleep(2)
+	
 	while True:
 # start overhead for getting distance each time #
-		GPIO.output(TRIG, False)	### FIX THIS ###		
-		time.sleep(0.1)
+		
 		GPIO.output(TRIG, True)
 		time.sleep(0.00001)
 		GPIO.output(TRIG, False)
